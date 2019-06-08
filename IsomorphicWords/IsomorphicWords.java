@@ -5,6 +5,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class IsomorphicWords {
+    /** 
+     * A method which returns the numerical pattern of a string. For example: "abca" and "dxyd" both have pattern "1231".
+     */
     public static String getPattern(String s) {
         int[] idx = new int[26];
         for (int i = 0; i < idx.length; i++) {
@@ -32,7 +35,7 @@ public class IsomorphicWords {
             patterns[i] = getPattern(words[i]);
         }
 
-
+        // A hash map which stores each string and its frequency as key and value
         HashMap<String, Integer> map = new HashMap<>();
         for (int i = 0; i < patterns.length; i++) {
             if (map.containsKey(patterns[i]))
