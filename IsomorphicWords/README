@@ -1,0 +1,42 @@
+Problem Statement
+    	
+Two words are called isomorphic if the letters in one word can be remapped to get the second word. Remapping a letter means replacing all occurrences of it with another letter. The ordering of the letters remains unchanged. No two letters may map to the same letter, but a letter may map to itself.
+
+For example, the words "abca" and "zbxz" are isomorphic because we can map 'a' to 'z', 'b' to 'b' and 'c' to 'x'.
+
+Given a String[] words, return how many (unordered) pairs of words are isomorphic.
+
+ 
+Definition
+    	
+Class:	IsomorphicWords
+Method:	countPairs
+Parameters:	String[]
+Returns:	int
+Method signature:	int countPairs(String[] words)
+(be sure your method is public)
+    
+ 
+Constraints
+-	words will contain between 2 and 50 elements, inclusive.
+-	Each element of words will contain between 1 and 50 lowercase letters ('a'-'z'), inclusive.
+-	All elements of words will have the same length.
+-	There will be no duplicates in words.
+ 
+Examples
+0)	
+    	
+{"abca", "zbxz", "opqr"}
+Returns: 1
+"abca" and "zbxz" are isomorphic, but none of the two is isomorphic with "opqr".
+1)	
+    	
+{"aa", "ab", "bb", "cc", "cd"}
+Returns: 4
+The four isomorphic pairs are {"aa", "bb"}, {"aa", "cc"}, {"bb", "cc"} and {"ab", "cd"}.
+2)	
+    	
+{ "cacccdaabc", "cdcccaddbc", "dcdddbccad", "bdbbbaddcb",
+  "bdbcadbbdc", "abaadcbbda", "babcdabbac", "cacdbaccad",
+  "dcddabccad", "cacccbaadb", "bbcdcbcbdd", "bcbadcbbca" }
+Returns: 13
