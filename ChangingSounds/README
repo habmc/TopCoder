@@ -1,0 +1,6 @@
+Topcoder SRM 366 DIV 1 Level 1
+
+Problem Statement:
+You are a guitar player and you are going to play a concert. You don't like to play all the songs at the same volume, so you decide to change the volume level of your guitar before each new song. Before the concert begins, you make a list of the number of intervals you will be changing your volume level by before each song. For each volume change, you will decide whether to add that number of intervals to the volume, or substract it.
+You are given a int[] changeIntervals, the i-th element of which is the number of intervals you will change your volume by before the i-th song. You are also given an int beginLevel, the initial volume of your guitar, and an int maxLevel, the highest volume setting of your guitar. You cannot change the volume of your guitar to a level above maxLevel or below 0 (but exactly 0 is no problem). Return the maximum volume you can use to play the last song. If there is no way to go through the list without exceeding maxLevel or going below 0, return -1.
+At each song we can generate our current state from the last song satates, checking if each state is a valid state or not. At the last song we can check the max level we can reach returning it, or -1 in case we can reach a level between 0 and max.
