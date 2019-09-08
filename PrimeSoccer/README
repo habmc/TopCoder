@@ -1,0 +1,45 @@
+Problem Statement
+    	You are watching a soccer match, and you wonder what the probability is that at least one of the two teams will score a prime number of goals. The game lasts 90 minutes, and to simplify the analysis, we will split the match into five-minute intervals. The first interval is the first five minutes, the second interval is the next five minutes, and so on. During each interval, there is a skillOfTeamA percent probability that team A will score a goal, and a skillOfTeamB percent probability that teamB will score a goal. Assume that each team will score at most one goal within each interval. Return the probability that at least one team will have a prime number as its final score.
+ 
+Definition
+    	
+Class:	PrimeSoccer
+Method:	getProbability
+Parameters:	int, int
+Returns:	double
+Method signature:	double getProbability(int skillOfTeamA, int skillOfTeamB)
+(be sure your method is public)
+    
+ 
+Notes
+-	The returned value must be accurate to within a relative or absolute value of 1E-9.
+-	A prime number is a number that has exactly two divisors, 1 and itself. Note that 0 and 1 are not prime.
+ 
+Constraints
+-	skillOfTeamA will be between 0 and 100, inclusive.
+-	skillOfTeamB will be between 0 and 100, inclusive.
+ 
+Examples
+0)	
+    	
+50
+50
+Returns: 0.5265618908306351
+1)	
+    	
+100
+100
+Returns: 0.0
+Both teams will score a goal in each interval, so the final result will be 18 to 18.
+2)	
+    	
+12
+89
+Returns: 0.6772047168840167
+This problem statement is the exclusive and proprietary property of TopCoder, Inc. Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited. (c)2010, TopCoder, Inc. All rights reserved.
+
+
+
+
+This problem was used for:
+       Single Round Match 422 Round 1 - Division I, Level One
