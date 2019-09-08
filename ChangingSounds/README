@@ -1,6 +1,62 @@
-Topcoder SRM 366 DIV 1 Level 1
+PROBLEM STATEMENT
+You are a guitar player and you are going to play a concert.  You don't like to play all the songs 
+at the same volume, so you decide to change the volume level of your guitar before each new song.  
+Before the concert begins, you make a list of the number of intervals you will be changing your 
+volume level by before each song.  For each volume change, you will decide whether to add that 
+number of intervals to the volume, or substract it.
 
-Problem Statement:
-You are a guitar player and you are going to play a concert. You don't like to play all the songs at the same volume, so you decide to change the volume level of your guitar before each new song. Before the concert begins, you make a list of the number of intervals you will be changing your volume level by before each song. For each volume change, you will decide whether to add that number of intervals to the volume, or substract it.
-You are given a int[] changeIntervals, the i-th element of which is the number of intervals you will change your volume by before the i-th song. You are also given an int beginLevel, the initial volume of your guitar, and an int maxLevel, the highest volume setting of your guitar. You cannot change the volume of your guitar to a level above maxLevel or below 0 (but exactly 0 is no problem). Return the maximum volume you can use to play the last song. If there is no way to go through the list without exceeding maxLevel or going below 0, return -1.
-At each song we can generate our current state from the last song satates, checking if each state is a valid state or not. At the last song we can check the max level we can reach returning it, or -1 in case we can reach a level between 0 and max.
+You are given a vector <int> changeIntervals, the i-th element of which is the number of intervals 
+you will change your volume by before the i-th song. You are also given an int beginLevel, the 
+initial volume of your guitar, and an int maxLevel, the highest volume setting of your guitar. You 
+cannot change the volume of your guitar to a level above maxLevel or below 0 (but exactly 0 is no 
+problem). Return the maximum volume you can use to play the last song. If there is no way to go 
+through the list without exceeding maxLevel or going below 0, return -1.
+
+
+DEFINITION
+Class:ChangingSounds
+Method:maxFinal
+Parameters:vector <int>, int, int
+Returns:int
+Method signature:int maxFinal(vector <int> changeIntervals, int beginLevel, int maxLevel)
+
+
+CONSTRAINTS
+-changeIntervals will contain between 1 and 50 elements, inclusive.
+-Each element of changeIntervals will be between 1 and maxLevel, inclusive.
+-maxLevel will be between 1 and 1000, inclusive.
+-beginLevel will be between 0 and maxLevel, inclusive.
+
+
+EXAMPLES
+
+0)
+{5, 3, 7}
+5
+10
+
+Returns: 10
+
+First we turn the volume down to 0 (-5), then we turn it up to 3 (+3), and then up to 10 (+7) for 
+the last song.
+
+1)
+{15, 2, 9, 10}
+8
+20
+
+Returns: -1
+
+Adding 15 to 8 or substracting 15 from 8 both give an invalid sound level.
+
+2)
+{74,39,127,95,63,140,99,96,154,18,137,162,14,88}
+40
+243
+
+Returns: 238
+
+
+
+ This problem statement is the exclusive and proprietary property of TopCoder, Inc. Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited. (c)2010, TopCoder, Inc. All rights reserved.
+ 
