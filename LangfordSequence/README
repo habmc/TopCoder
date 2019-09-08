@@ -1,0 +1,64 @@
+TopCoder problem "LangfordSequence" used in TCHS08 Finals (Division I Level One)
+
+Problem Statement
+    	
+Let X be a set of n distinct integers. A sequence S of 2*n integers is called a Langford sequence for X if it satisfies both of the following properties:
+
+Each number in X occurs exactly twice in S.
+For each number i in X, there are exactly i numbers between the two occurrences of i in S.
+For example, (2 3 1 2 1 3) is a Langford sequence for the set {1, 2, 3}. 1, 2 and 3 each occur exactly twice in the sequence. There is exactly 1 number between the two occurrences of 1 in the sequence, exactly 2 numbers between the two occurrences of 2, and exactly 3 numbers between the two occurrences of 3.
+
+You are given a int[] a containing a set of distinct integers. Return the lexicographically first Langford sequence for this set. If there is no Langford sequence, return an empty int[] instead.
+
+ 
+Definition
+    	
+Class:	LangfordSequence
+Method:	getFirst
+Parameters:	int[]
+Returns:	int[]
+Method signature:	int[] getFirst(int[] a)
+(be sure your method is public)
+    
+ 
+Notes
+-	A int[] A comes before a int[] B lexicographically if A has a smaller integer at the first index at which they differ.
+ 
+Constraints
+-	a will contain between 1 and 8 elements, inclusive.
+-	Each element of a will be between 0 and 16, inclusive.
+-	All elements of a will be distinct.
+ 
+Examples
+0)	
+    	
+{1, 2, 3}
+Returns: {2, 3, 1, 2, 1, 3 }
+The example from the problem statement.
+1)	
+    	
+{0}
+Returns: {0, 0 }
+2)	
+    	
+{1, 2, 3, 4}
+Returns: {2, 3, 4, 2, 1, 3, 1, 4 }
+Another classical example of a Langford sequence.
+3)	
+    	
+{1, 2, 3, 4, 5}
+Returns: { }
+There is no such sequence. To see this, imagine that the sequence exists. Note that the two 1's are at positions with the same parity (either both odd or both even), and so are the two 3's and the two 5's. This means either 4 out of 5 odd or 4 out of 5 even positions contain odd numbers. However, the positions that contain the two 2's do not have the same parity, and neither do the positions that contain the two 4's. So, there are either not enough odd positions or not enough even positions.
+4)	
+    	
+{2, 0}
+Returns: {2, 0, 0, 2 }
+Note that the input will not necessarily be sorted.
+5)	
+    	
+{0, 4, 13, 12, 8, 5, 2, 14}
+Returns: { }
+6)	
+    	
+{8, 0, 12, 6, 2, 4, 3, 13}
+Returns: {12, 13, 2, 8, 3, 2, 4, 6, 3, 0, 0, 4, 8, 12, 6, 13 }
