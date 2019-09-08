@@ -1,0 +1,2 @@
+Problem Statement
+In The Sorting Game, you are given a sequence containing a permutation of the integers between 1 and n, inclusive. In one move, you can take any k consecutive elements of the sequence and reverse their order. The goal of the game is to sort the sequence in ascending order. You are given a int[] board describing the initial sequence. Return the fewest number of moves necessary to finish the game successfully, or -1 if it's impossible.
